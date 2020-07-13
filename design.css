@@ -1,0 +1,353 @@
+/* Début Page Index -------------------------------------------------------------------*/ 
+
+html, body 
+{
+ margin:0;
+ padding:0;
+}
+
+header
+{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.listecam a, .menu2 a, .menu3 a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.listecam a:hover, .appa a:hover, .menu2 a:hover, .menu3 a:hover
+{
+    text-decoration: none;
+    color: black;
+}
+
+.logo
+{
+    text-align: center;
+    margin-top: 35px;
+    height: 80px;
+}
+
+.logodef
+{
+    width: 20%;
+}
+
+.logodef2
+{
+    width: 2%;
+    padding-bottom: 2.5%;
+}
+
+.logodef3
+{
+    width: 100px;
+    padding-bottom: 6.9px;
+}
+
+.logodef4
+{
+    width: 7%;
+    padding-left: 5px;
+}
+
+.logodef5
+{
+    width: 1%;
+    padding-bottom: 7px;
+}
+
+.Menu
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.menu1
+{
+    position: relative;
+    padding-top: 1.3%;
+    flex: 1;
+}
+
+.menu2
+{
+    position: relative;
+    flex: 1;
+    padding-top: 1%;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.men2, .men3
+{
+    transition: all 400ms;
+}
+
+.menu3
+{
+    position: relative;
+    flex: 1;
+    width: auto;
+    padding-top: 1%;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+footer
+{
+	height: 50px;
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+hr
+{
+    margin: 100px auto;
+    width: 99%;
+    height: 4px;
+    background: rgb(230,138,8);
+    background: linear-gradient(90deg, rgba(230,138,8,1) 0%, rgba(230,138,0,1) 30%, rgba(0,0,0,1) 50%, rgba(147,93,244,1) 70%, rgba(147,93,244,1) 100%);
+    border: none;
+}
+
+aside
+{
+    height: 80%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pagemilieu
+{
+    height: 700px;
+}
+
+#displayphoto
+{
+    border-left: 0.5px solid black;
+    height: 90%;
+    
+}
+
+#pagemilieu
+{
+    display: flex;
+}
+
+.appa
+{
+    text-align: center;
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+.categories
+{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.txtapp
+{
+    text-decoration: none;
+    color: black;
+    transition: all 500ms;
+}
+
+.listecam
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+}
+
+img
+{
+    border-radius: 5%;
+}
+
+.cam12, .cam22, .cam32, .cam42, .cam52
+{
+    text-align: center;
+    transition: all 500ms;
+}
+
+.cam1, .cam2, .cam3, .cam4, .cam5
+{
+    padding-top: 5%;
+    text-decoration: none;
+}
+
+@keyframes couleurboucletxt 
+{
+    from, to { color: #e78b05; }
+    50%      { color: #945eef; }
+    90%      { color: #e78b05; }
+}
+
+.cam12:hover, .cam22:hover, .cam32:hover, .cam42:hover, .cam52:hover, .txtapp:hover
+{
+    color: hsl(324, 70%, 45%);
+    animation: couleurboucletxt 3s forwards alternate infinite;
+    transform: scale(1.20);
+}
+
+.menu2 a:hover
+{
+    color: #e78b05;
+}
+
+.men2:hover
+{
+    transform: scale(1.20);
+}
+
+.menu3 a:hover
+{
+    color: #945eef;
+    transform: scale(1.20);
+}
+
+.oriwhite
+{
+    width: 8%;
+    color: white;
+    text-align: center;
+    padding-top:0.4%;
+}
+
+/* Fin Page Index -------------------------------------------------------------------*/ 
+
+/* Debut Page vcam1 -----------------------------------------------------------------*/ 
+
+.l1istecam
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c1am1
+{
+    margin-left: 85%;
+    margin-top: 10%;
+}
+
+.d1es, .d2es, .d3es, .d4es, .d5es
+{
+    margin-left: 60%;
+    margin-top: 10%;
+}
+
+.titre
+{
+    text-align: center;
+    padding-top: 10%;
+}
+
+.hh1
+{
+    font-size: 30px;
+}
+
+#p1agemilieu
+{
+    height: 400px;
+}
+
+.menucarrousel
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.previous
+{
+    text-decoration: none;
+    color: #e78b05;
+    transition: all 500ms;
+} 
+
+.prev
+{
+    text-decoration: none;
+    color: #e78b05;
+}
+
+.next
+{
+    text-decoration: none;
+    color: #945eef;
+    transition: all 500ms;
+}
+
+.nex 
+{
+    text-decoration: none;
+    color: #945eef;
+}
+
+.previous:hover, .next:hover
+{
+    transform: scale(1.40);
+}
+
+/* Fin Page vcam1 --------------------------------------------------------------------*/ 
+
+/* Début Page Panier -----------------------------------------------------------------*/ 
+
+#dpisplayphoto
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tpitre
+{
+    margin-top: 1%;
+}
+
+.lpistecam
+{
+    display: flex;
+    margin-top: 3%;
+}
+
+.dpes
+{
+    width: 200px;
+}
+
+.dpes2
+{
+    width: 200px;
+    margin-left: 1%;
+}
+
+.cpam 
+{
+    padding-right: 40px;
+}
+
+
+/* Fin Page Panier -------------------------------------------------------------------*/ 
