@@ -8,8 +8,10 @@
         <link rel="stylesheet" href="design.css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
-        <script src="camera.js"></script>
+        <script src="routes/camera.js"></script>
         <script src="server.js"></script>
+        <script src="requete.js" async></script>
+        <script src="post.js" async></script>
         <script src="app.js"></script>
     </head>
     <body>
@@ -41,18 +43,27 @@
                         <a href="index.html"><div class="txtapp">Caméras Vintage</div></a>
                     </section>
                 </aside>
-                <section id="displayphoto">
+                <section id="d1isplayphoto">
                     <div class="titre">
-                        <h1 class="hh1">mini_vcam_1</h1>
+                        <h1 id="innerNom1" class="hh1"></h1>
                     </div>
                     <div class="l1istecam">
                         <div class="c1am1">
-                            <div class="cam11"><img src="images/mini_vcam_1.jpg" alt="image camera 1"></div>  
+                            <div class="cam11"><img src="images/mini_vcam_1.jpg" alt="image camera 1"></div>
                         </div>
                         <div class="d1es">
-                            <script>
-                                console.log(vcam1);
-                            </script>
+                            Nom : <span id="innerNom11"></span></br>
+                            Description : <span id="innerDes1"></span></br>
+                            Prix : <span id="innerPri1"></span>€</br>
+                            Référence : <span id="innerId1"></span></br>
+                            <label for="choixoptique1">Quelle objectifs souhaitez-vous avec votre appareil photo ?</label>
+                            <select>
+                                <option id="innerOpt10"></option>
+                                <option id="innerOpt11"></option>
+                            </select></br></br>
+                            <form> 
+                                <input type="button" class="pan1" type="button" value="Ajouter l'article au panier">
+                              </form>
                         </div>
                     </div>
                     <div class="menucarrousel">

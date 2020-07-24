@@ -10,6 +10,7 @@
         <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
         <script src="camera.js"></script>
         <script src="server.js"></script>
+        <script src="requete.js" async></script>
         <script src="app.js"></script>
     </head>
     <body>
@@ -41,19 +42,28 @@
                         <a href="index.html"><div class="txtapp">Caméras Vintage</div></a>
                     </section>
                 </aside>
-                <section id="displayphoto">
+                <section id="d1isplayphoto">
                     <div class="titre">
-                        <h1 class="hh1">mini_vcam_2</h1>
+                        <h1 id="innerNom2" class="hh1"></h1>
                     </div>
                     <div class="l1istecam">
                         <div class="c1am1">
                             <div class="cam21"><img src="images/mini_vcam_2.jpg" alt="image camera 2"></div>  
                         </div>
                         <div class="d2es">
-                            Description</br>
-                            optique</br>
-                            Prix</br>
-                            Disponibilités
+                            Nom : <span id="innerNom21"></span></br>
+                            Description : <span id="innerDes2"></span></br>
+                            Prix : <span id="innerPri2"></span>€</br>
+                            Référence : <span id="innerId2"></span></br>
+                            <label for="choixoptique2">Quelle objectifs souhaitez-vous avec votre appareil photo ?</label>
+                                <select>
+                                    <option id="innerOpt20"></option>
+                                    <option id="innerOpt21"></option>
+                                    <option id="innerOpt22"></option>
+                                </select></br></br>
+                                <form (action="/Ajouter-au-panier", method="POST")></form>
+                                <button id ="Button2" class="pan2" class="add-to-cart" class="btn btn-primary" type="submit" onclick="ajouter1()"> Ajouter au panier
+                                </button>
                         </div>
                     </div>
                     <div class="menucarrousel">

@@ -10,6 +10,7 @@
         <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
         <script src="camera.js"></script>
         <script src="server.js"></script>
+        <script src="requete.js" async></script>
         <script src="app.js"></script>
     </head>
     <body>
@@ -41,19 +42,23 @@
                         <a href="index.html"><div class="txtapp">Caméras Vintage</div></a>
                     </section>
                 </aside>
-                <section id="displayphoto">
+                <section id="d1isplayphoto">
                     <div class="titre">
-                        <h1 class="hh1">mini_vcam_5</h1>
+                        <h1 id="innerNom5" class="hh1"></h1>
                     </div>
                     <div class="l1istecam">
                         <div class="c1am1">
                             <div class="cam51"><img src="images/mini_vcam_5.jpg" alt="image camera 5"></div>  
                         </div>
                         <div class="d5es">
-                            Description</br>
-                            optique</br>
-                            Prix</br>
-                            Disponibilités
+                            Nom : <span id="innerNom51"></span></br>
+                            Description : <span id="innerDes5"></span></br>
+                            Prix : <span id="innerPri5"></span>€</br>
+                            Référence : <span id="innerId5"></span></br>
+                            <label for="choixoptique5">Quelle objectifs souhaitez-vous avec votre appareil photo ?</label>
+                            <button class="pan5" type="button" data-id="5" data-name="Katatone" data-price="59900€" data-url="vcam5.html">
+                                Ajouter au panier
+                            </button>
                         </div>
                     </div>
                     <div class="menucarrousel">

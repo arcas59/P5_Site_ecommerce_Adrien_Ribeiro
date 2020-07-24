@@ -10,6 +10,7 @@
         <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
         <script src="camera.js"></script>
         <script src="server.js"></script>
+        <script src="requete.js" async></script>
         <script src="app.js"></script>
     </head>
     <body>
@@ -41,19 +42,27 @@
                         <a href="index.html"><div class="txtapp">Caméras Vintage</div></a>
                     </section>
                 </aside>
-                <section id="displayphoto">
+                <section id="d1isplayphoto">
                     <div class="titre">
-                        <h1 class="hh1">mini_vcam_4</h1>
+                        <h1 id="innerNom4" class="hh1"></h1>
                     </div>
                     <div class="l1istecam">
                         <div class="c1am1">
                             <div class="cam41"><img src="images/mini_vcam_4.jpg" alt="image camera 4"></div>  
                         </div>
                         <div class="d4es">
-                            Description</br>
-                            optique</br>
-                            Prix</br>
-                            Disponibilités
+                            Nom : <span id="innerNom41"></span></br>
+                            Description : <span id="innerDes4"></span></br>
+                            Prix : <span id="innerPri4"></span>€</br>
+                            Référence : <span id="innerId4"></span></br>
+                            <label for="choixoptique4">Quelle objectifs souhaitez-vous avec votre appareil photo ?</label>
+                            <select>
+                                <option id="innerOpt40"></option>
+                                <option id="innerOpt41"></option>
+                            </select></br></br>
+                            <button class="pan4" type="button" data-name="Kuros TTS" data-price="159900€" data-url="vcam4.html">
+                                Ajouter au panier
+                            </button>
                         </div>
                     </div>
                     <div class="menucarrousel">

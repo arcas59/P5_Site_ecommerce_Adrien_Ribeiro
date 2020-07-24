@@ -10,6 +10,7 @@
         <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
         <script src="camera.js"></script>
         <script src="server.js"></script>
+        <script src="post.js" async></script>
         <script src="app.js"></script>
     </head>
     <body>
@@ -32,36 +33,64 @@
                 </div>
             </header>
             <hr>
-            <main id="pagemilieu">
-                <aside>
-                    <section class="categories">
-                        CATEGORIES
-                    </section>
-                    <section class="appa">
-                        <a href="index.html"><div class="txtapp">Caméras Vintage</div></a>
-                    </section>
-                </aside>
+            <main id="pagemilieup">
                 <section id="dpisplayphoto">
                     <div class="tpitre">
                         <h1 class="hh1">Votre Panier</h1>
                     </div>
-                    <div class="lpistecam">
-                        <div class="cpam">
-                            <div class="campanier"><img src="images/mini_vcam_5.jpg" alt="image camera 5"></div>  
+                    <div id=paniermenu>
+                        <div id="panier1">
+                            <div class="nomm1"></div>
+                            <div class="prixx1"></div>
                         </div>
-                        <div class="dpes">
-                            Description :</br>
-                            Optique :</br>
-                            Prix :</br>
-                            Disponibilités :
+                        <div id="panier2">
+                            <div id="nomm2"></div>
+                            <div id="prixx2"></div>
                         </div>
-                        <div class="dpes2">
-                            Bla bla bla</br>
-                            35mm f 1.4</br>
-                            435€</br>
-                            en stock
+                        <div id="panier3">
+                            <div id="nomm3"></div>
+                            <div id="prixx3"></div>
+                        </div>
+                        <div id="panier4">
+                            <div id="nomm4"></div>
+                            <div id="prixx4"></div>
+                        </div>
+                        <div id="panier5">
+                            <div id="nomm5"></div>
+                            <div id="prixx5"></div>
                         </div>
                     </div>
+                    <div id="total">
+                        Total du panier :
+                    </div>
+                </section>
+                <section id="formulaires">
+                    <form method="post" action="traitement.php">
+                        <fieldset>
+                            <legend class="deco">Vos coordonnées</legend>
+                            <p>
+                                <label for="nom">Indiquez votre Nom :</label>
+                                <input type="text" name="nom" id="nom" maxlength="20" autofocus required>
+                            </p>
+                            <p>
+                                <label for="prenom">Indiquez votre Prénom :</label>
+                                <input type="text" name="prneom" id="prenom" maxlength="20" required>
+                            </p>
+                            <p>
+                                <label for="nom">Indiquez votre adresse :</label>
+                                <input type="text" name="ville" id="ville" minlength="5" required>
+                            </p>
+                            <p>
+                                <label for="nom">Indiquez votre ville :</label>
+                                <input type="text" name="ville" id="ville" minlength="1" required>
+                            </p>
+                            <p>
+                                <label for="nom">Indiquez votre Email :</label>
+                                <input type="mail" name="email" id="email" minlength="3" required>
+                            </p>
+                                <input type="submit" value="Passer la commande" />
+                        </fieldset>
+                    </form>
                 </section>
             </main>
             <footer>

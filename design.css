@@ -1,11 +1,5 @@
 /* Début Page Index -------------------------------------------------------------------*/ 
 
-html, body 
-{
- margin:0;
- padding:0;
-}
-
 header
 {
     height: 150px;
@@ -107,9 +101,8 @@ footer
 	height: 50px;
     background-color: black;
     width: 100%;
-    position: fixed;
-    bottom: 0;
     text-align: center;
+    margin-bottom: 0;
 }
 
 hr
@@ -243,29 +236,74 @@ img
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 10%;
+}
+
+#d1isplayphoto
+{
+    width: 80%;
+    border-left: 0.5px solid black;
+    height: 90%;
 }
 
 .c1am1
 {
-    margin-left: 85%;
-    margin-top: 10%;
 }
 
 .d1es, .d2es, .d3es, .d4es, .d5es
 {
-    margin-left: 60%;
-    margin-top: 10%;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+#innerNom1, #innerNom11, #innerDes1, #innerPri1, #innerId1, #innerOpt1, #innerNom2, #innerNom21, #innerDes2, #innerPri2, #innerId2, #innerOpt2, #innerNom3, #innerNom31, #innerDes3, #innerPri3, #innerId3, #innerOpt3, #innerNom4, #innerNom41, #innerDes4, #innerPri4, #innerId4, #innerOpt4, #innerNom5, #innerNom51, #innerDes5, #innerPri5, #innerId5, #innerOpt5
+{
+    font-weight: normal;
+}
+
+.gras
+{
+    font-weight: bold;
 }
 
 .titre
 {
     text-align: center;
-    padding-top: 10%;
+    padding-top: 1.2%;
+    height: 10%;
 }
 
 .hh1
 {
     font-size: 30px;
+}
+
+.pan1, .pan2, .pan3, .pan4, .pan5
+{
+    border: 2px solid black;
+    margin-left: 5%;
+    line-height: 2.5;
+    padding: 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 450ms;
+}
+
+.pan1:hover, .pan2:hover, .pan3:hover, .pan4:hover, .pan5:hover 
+{
+    transform: scale(1.02);
+    color: white;
+    background-color: black;
+    opacity: 0.85;
+}
+
+.buttonori:active 
+{
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
 #p1agemilieu
@@ -314,6 +352,11 @@ img
 
 /* Début Page Panier -----------------------------------------------------------------*/ 
 
+#pagemilieup
+{
+    display: flex;
+}
+
 #dpisplayphoto
 {
     width: 100%;
@@ -325,7 +368,24 @@ img
 .tpitre
 {
     margin-top: 1%;
+    text-align: center;
+    text-decoration: underline 3px #945eef;
 }
+
+.deco
+{
+    text-decoration: underline 3px #e78b05;
+    font-size: 30px;
+    margin-top: 1%;
+}
+
+#total
+{
+    text-decoration: underline 3px #e78b05;
+    font-size: 25px;
+    margin-top: 2%;
+}
+
 
 .lpistecam
 {
@@ -349,5 +409,43 @@ img
     padding-right: 40px;
 }
 
+#paniermenu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-top: 2%;
+}
+
+#panier1, #panier2, #panier3, #panier4, #panier5
+{
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    width: 70%;
+    text-align: center;
+}
+
+#nomm1, #nomm2, #nomm3, #nomm4, #nomm5 
+{
+    margin-left: 0px;
+    text-align: center;
+    width: 30%;
+}
+
+#prixx1, #prixx2,#prixx3, #prixx4, #prixx5
+{
+    text-align: center;
+    width: 20%;
+}
+
+#formulaires
+{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 2%;
+
+}
 
 /* Fin Page Panier -------------------------------------------------------------------*/ 

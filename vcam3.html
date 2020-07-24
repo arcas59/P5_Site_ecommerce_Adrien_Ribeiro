@@ -10,6 +10,7 @@
         <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
         <script src="camera.js"></script>
         <script src="server.js"></script>
+        <script src="requete.js" async></script>
         <script src="app.js"></script>
     </head>
     <body>
@@ -41,19 +42,26 @@
                         <a href="index.html"><div class="txtapp">Caméras Vintage</div></a>
                     </section>
                 </aside>
-                <section id="displayphoto">
+                <section id="d1isplayphoto">
                     <div class="titre">
-                        <h1 class="hh1">mini_vcam_3</h1>
+                        <h1 id="innerNom3" class="hh1"></h1>
                     </div>
                     <div class="l1istecam">
                         <div class="c1am1">
                             <div class="cam31"><img src="images/mini_vcam_3.jpg" alt="image camera 3"></div>  
                         </div>
                         <div class="d3es">
-                            Description</br>
-                            optique</br>
-                            Prix</br>
-                            Disponibilités
+                            Nom : <span id="innerNom31"></span></br>
+                            Description : <span id="innerDes3"></span></br>
+                            Prix : <span id="innerPri3"></span>€</br>
+                            Référence : <span id="innerId3"></span></br>
+                            <label for="choixoptique3">Quelle objectifs souhaitez-vous avec votre appareil photo ?</label>
+                            <select>
+                                <option id="innerOpt30"></option>
+                            </select></br></br>
+                            <button class="pan3" type="button" data-name="Franck JS 105" data-price="209900€" data-url="vcam3.html">
+                                Ajouter au panier
+                            </button>
                         </div>
                     </div>
                     <div class="menucarrousel">
