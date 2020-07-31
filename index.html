@@ -8,10 +8,6 @@
         <link rel="stylesheet" href="design.css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
-        <script src="camera.js"></script>
-        <script src="server.js"></script>
-        <script src="requete.js"></script>
-        <script src="app.js"></script>
     </head>
     <body>
         <div id="pageentiere">
@@ -43,35 +39,13 @@
                     </section>
                 </aside>
                 <section id="displayphoto">
-                    <div class="listecam">
-                        <div class="cam1">
+                    <div id="listecam">
+                        <div class="cam">
                             <a href="vcam1.html">
-                                <div class="cam11"><img src="images/mini_vcam_1.jpg" alt="image camera 1"></div>
+                                <div class="imgContainer">
+                                    <img src="images/mini_vcam_1.jpg" alt="image camera 1" />
+                                </div>
                                 <div id="innerIndNom1" class="cam12"></div>
-                            </a>    
-                        </div>
-                        <div class="cam2">
-                            <a href="vcam2.html">
-                                <div class="cam21"><img src="images/mini_vcam_2.jpg" alt="image camera 2"></div>
-                                <div id="innerIndNom2" class="cam22"></div>
-                            </a>
-                        </div>
-                        <div class="cam3">
-                            <a href="vcam3.html">
-                                <div class="cam31"><img src="images/mini_vcam_3.jpg" alt="image camera 3"></div>
-                                <div id="innerIndNom3" class="cam32"></div>
-                            </a>
-                        </div>
-                        <div class="cam4">
-                            <a href="vcam4.html">
-                                <div class="cam41"><img src="images/mini_vcam_4.jpg" alt="image camera 4"></div>
-                                <div id="innerIndNom4" class="cam42"></div>
-                            </a>
-                        </div>
-                        <div class="cam5">
-                            <a href="vcam5.html">
-                                <div class="cam51"><img class="cam55" src="images/mini_vcam_5.jpg" alt="image camera 5"></div>
-                                <div id="innerIndNom5" class="cam52"></div>
                             </a>
                         </div>
                     </div>
@@ -82,5 +56,7 @@
                 <img class="logodef5" src="images/caddie.png" alt="logo caddie">
             </footer>
         </div>
+        <script src="js/requete.js" async></script>
+        <script src="js/post.js" async></script>
     </body>
 </html>
