@@ -142,12 +142,6 @@ aside
     display: flex;
 }
 
-img
-{
-    width: 200px;
-    border-radius: 5%;
-}
-
 .appa
 {
     text-align: center;
@@ -169,47 +163,56 @@ img
     transition: all 500ms;
 }
 
-#listecam
+.menu1CSS
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     align-content: space-around;
-    text-align: center;
-}$
+    padding-top: 5%;
+}
 
-p
+.menu2CSS
 {
-    font-size: 30px;
+    margin-left: 10%;
+}
+
+.menu3CSS
+{
+    width: 200px;
+    border-radius: 5%;
+}
+
+.menu4CSS
+{
+    font-size: 20px;
+}
+
+.menu5CSS
+{
+    font-size: 15px;
+}
+
+.menu4CSS, .menu5CSS
+{
+    text-align: center;
+    transition: all 500ms;
 }
 
 
-    .cam12, .cam22, .cam32, .cam42, .cam52
-    {
-    text-align: center;
-    transition: all 500ms;
-    }
+@keyframes couleurboucletxt 
+{
+    from, to { color: black; }
+    50%      { color: #e78b05; }
+    100%      { color: #945eef; }
+}
 
-    .cam1, .cam2, .cam3, .cam4, .cam5
-    {
-    padding-top: 5%;
-    text-decoration: none;
-    }
-
-    @keyframes couleurboucletxt 
-    {
-    from, to { color: #e78b05; }
-    50%      { color: #945eef; }
-    90%      { color: #e78b05; }
-    }
-
-    .cam12:hover, .cam22:hover, .cam32:hover, .cam42:hover, .cam52:hover, .txtapp:hover
-    {
-    color: hsl(324, 70%, 45%);
-    animation: couleurboucletxt 3s forwards alternate infinite;
+.menu4CSS:hover, .menu5CSS:hover, .txtapp:hover
+{
+    animation: couleurboucletxt 2s forwards alternate infinite;
     transform: scale(1.20);
-    }
+}
 
 .menu2 a:hover
 {
@@ -252,10 +255,6 @@ p
     width: 80%;
     border-left: 0.5px solid black;
     height: 90%;
-}
-
-.c1am1
-{
 }
 
 .d1es, .d2es, .d3es, .d4es, .d5es
@@ -317,43 +316,6 @@ p
 #p1agemilieu
 {
     height: 400px;
-}
-
-.menucarrousel
-{
-    display: flex;
-    justify-content: space-around;
-}
-
-.previous
-{
-    text-decoration: none;
-    color: #e78b05;
-    transition: all 500ms;
-} 
-
-.prev
-{
-    text-decoration: none;
-    color: #e78b05;
-}
-
-.next
-{
-    text-decoration: none;
-    color: #945eef;
-    transition: all 500ms;
-}
-
-.nex 
-{
-    text-decoration: none;
-    color: #945eef;
-}
-
-.previous:hover, .next:hover
-{
-    transform: scale(1.40);
 }
 
 /* Fin Page vcam1 --------------------------------------------------------------------*/ 

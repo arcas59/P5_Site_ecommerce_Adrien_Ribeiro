@@ -1,4 +1,5 @@
 const list = document.getElementById("listecam");
+list.className = "menu1CSS";
 
 const getParsedData = function (data) {
     return JSON.parse(data);
@@ -7,9 +8,10 @@ const getParsedData = function (data) {
 const createElement = function (data) {
     const el = document.createElement("DIV");
     el.classList.add("cam");
+    el.className = "menu2CSS";
 
     const link = document.createElement("A");
-    link.href = "/cam.html?id=" + data._id;
+    link.href = "/vcam.html?id=" + data._id;
 
     el.appendChild(link);
 
@@ -19,6 +21,7 @@ const createElement = function (data) {
     link.appendChild(elChild);
 
     const imgReflex = document.createElement("IMG");
+    imgReflex.className = "menu3CSS";
     imgReflex.alt = data.name;
     imgReflex.src = data.imageUrl;
 
@@ -26,11 +29,13 @@ const createElement = function (data) {
 
     const nomReflex = document.createElement("p");
     nomReflex.innerText = data.name;
+    nomReflex.className = "menu4CSS";
 
     link.appendChild(nomReflex);
 
     const prixReflex = document.createElement("p");
     prixReflex.innerText = data.price + " €";
+    prixReflex.className = "menu5CSS";
 
     nomReflex.appendChild(prixReflex);
 
