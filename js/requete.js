@@ -1,6 +1,10 @@
 const list = document.getElementById("listecam");
 list.className = "menu1CSS";
 
+const getParsedData = function (data) {
+    return JSON.parse(data);
+};
+
 const createElement = function (data) {
     const el = document.createElement("DIV");
     el.classList.add("cam");
