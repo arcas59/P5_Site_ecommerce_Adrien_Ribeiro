@@ -150,5 +150,4 @@ function prixTotal(){
     div.appendChild(label);
     div.appendChild(lenses);
     div.appendChild(ajoutPanier)
-    div.appendChild(liste);
 };
