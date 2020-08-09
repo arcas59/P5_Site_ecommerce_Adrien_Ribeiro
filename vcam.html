@@ -7,6 +7,7 @@
 		<meta name="robots" content="all">
         <link rel="stylesheet" href="design.css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
         <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -24,42 +25,18 @@
                         <a class="men2" href="index.html">Produits</a>
                     </div>
                     <div class="menu3">
-                        <a class="men3" href="panier.html">Mon Panier<img class="logodef4" src="images/caddie.png" alt="logo caddie"></a>
+                        <a class="men3" href="panier.html" data-target="panier">Mon Panier<img
+                            class="logodef4"
+                            src="images/caddie.png"
+                            alt="logo caddie"
+                        /><span class="totalQté"></span></a>
                     </div>
                 </div>
             </header>
             <hr>
-            <main id="pagemilieu">
-                <aside>
-                    <section class="categories">
-                        CATEGORIES
-                    </section>
-                    <section class="appa">
-                        <a href="index.html"><div class="txtapp">Caméras Vintage</div></a>
-                    </section>
-                </aside>
+            <main id="pagevcam">
                 <section id="d1isplayphoto">
-                    <div class="titre">
-                        <h1 id="innerNom1" class="hh1"></h1>
-                    </div>
-                    <div class="l1istecam">
-                        <div class="c1am1">
-                            <div class="cam11"><img src="images/mini_vcam_1.jpg" alt="image camera 1"></div>
-                        </div>
-                        <div class="d1es">
-                            Nom : <span id="innerNom11"></span></br>
-                            Description : <span id="innerDes1"></span></br>
-                            Prix : <span id="innerPri1"></span>€</br>
-                            Référence : <span id="innerId1"></span></br>
-                            <label for="choixoptique1">Quelle objectifs souhaitez-vous avec votre appareil photo ?</label>
-                            <select>
-                                <option id="innerOpt10"></option>
-                                <option id="innerOpt11"></option>
-                            </select></br></br>
-                            <form> 
-                                <input type="button" class="pan1" type="button" value="Ajouter l'article au panier">
-                              </form>
-                        </div>
+                    <div id="produit">
                     </div>
                 </section>
             </main>

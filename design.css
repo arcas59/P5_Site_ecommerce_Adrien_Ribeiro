@@ -1,61 +1,81 @@
-/* Début Page Index -------------------------------------------------------------------*/ 
+/* Début Page Index -------------------------------------------------------------------*/
 
-header
+header 
 {
     height: 150px;
     display: flex;
     flex-direction: column;
 }
 
-#listecam a, .menu2 a, .menu3 a
+main
+{
+    margin-bottom: 5%;
+}
+
+h1
+{
+    text-align: center;
+}
+
+p
+{
+    text-align: center;
+}
+
+#listecam a,
+.menu2 a,
+.menu3 a 
 {
     text-decoration: none;
     color: black;
 }
 
-#listecam a:hover, .appa a:hover, .menu2 a:hover, .menu3 a:hover
+#listecam a:hover,
+.appa a:hover,
+.menu2 a:hover,
+.menu3 a:hover 
 {
     text-decoration: none;
     color: black;
 }
 
-.logo
+.logo 
 {
     text-align: center;
     margin-top: 35px;
     height: 80px;
 }
 
-.logodef
+.logodef 
 {
     width: 20%;
 }
 
-.logodef2
+.logodef2 
 {
     width: 2%;
     padding-bottom: 2.5%;
 }
 
-.logodef3
+.logodef3 
 {
     width: 100px;
     padding-bottom: 6.9px;
 }
 
-.logodef4
+.logodef4 
 {
     width: 7%;
     padding-left: 5px;
 }
 
-.logodef5
+.logodef5 
 {
     width: 1%;
     padding-bottom: 7px;
 }
 
-.Menu
+.Menu 
 {
     margin-top: 20px;
     display: flex;
@@ -63,14 +83,14 @@ header
     text-align: center;
 }
 
-.menu1
+.menu1 
 {
     position: relative;
     padding-top: 1.3%;
     flex: 1;
 }
 
-.menu2
+.menu2 
 {
     position: relative;
     flex: 1;
@@ -80,12 +100,13 @@ header
     font-size: 20px;
 }
 
-.men2, .men3
+.men2,
+.men3 
 {
     transition: all 400ms;
 }
 
-.menu3
+.menu3 
 {
     position: relative;
     flex: 1;
@@ -96,26 +117,26 @@ header
     font-size: 20px;
 }
 
-footer
+footer 
 {
-	height: 50px;
+    height: 50px;
     background-color: black;
     width: 100%;
     text-align: center;
     margin-bottom: 0;
+    bottom: 0;
 }
 
-hr
+hr 
 {
     margin: 100px auto;
     width: 99%;
     height: 4px;
-    background: rgb(230,138,8);
-    background: linear-gradient(90deg, rgba(230,138,8,1) 0%, rgba(230,138,0,1) 30%, rgba(0,0,0,1) 50%, rgba(147,93,244,1) 70%, rgba(147,93,244,1) 100%);
+    background: rgb(147, 93, 244, 1);
     border: none;
 }
 
-aside
+aside 
 {
     height: 80%;
     width: 20%;
@@ -125,45 +146,45 @@ aside
     align-items: center;
 }
 
-#pagemilieu
+#pagemilieu 
 {
     min-height: 500px;
 }
 
-#displayphoto
+#displayphoto 
 {
-    border-left: 0.5px solid black;
     height: 90%;
-    
 }
 
-#pagemilieu
+#pagemilieu 
 {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.appa
+.appa 
 {
     text-align: center;
     margin-top: 40px;
     text-decoration: none;
 }
 
-.categories
+.categories 
 {
     text-align: center;
     margin-top: 20px;
     font-size: 20px;
 }
 
-.txtapp
+.txtapp 
 {
     text-decoration: none;
     color: black;
     transition: all 500ms;
 }
 
-.menu1CSS
+.menu1CSS 
 {
     display: flex;
     flex-wrap: wrap;
@@ -173,119 +194,105 @@ aside
     padding-top: 5%;
 }
 
-.menu2CSS
+.menu2CSS 
 {
     margin-left: 10%;
 }
 
-.menu3CSS
+.menu3CSS 
 {
     width: 200px;
     border-radius: 5%;
 }
 
-.menu4CSS
+.menu4CSS 
+{
+    width: 250px;
+    border-radius: 5%;
+}
+
+.menu5CSS 
 {
     font-size: 20px;
 }
 
-.menu5CSS
-{
-    font-size: 15px;
-}
-
-.menu4CSS, .menu5CSS
+.menu5CSS 
 {
     text-align: center;
     transition: all 500ms;
 }
 
-
 @keyframes couleurboucletxt 
 {
-    from, to { color: black; }
-    50%      { color: #e78b05; }
-    100%      { color: #945eef; }
+    from,
+    to {
+        color: black;
+    }
+    50% {
+        color: #e78b05;
+    }
+    100% {
+        color: #945eef;
+    }
 }
 
-.menu4CSS:hover, .menu5CSS:hover, .txtapp:hover
+.menu5CSS:hover,
+.txtapp:hover 
 {
     animation: couleurboucletxt 2s forwards alternate infinite;
-    transform: scale(1.20);
+    transform: scale(1.2);
 }
 
-.menu2 a:hover
+.menu2 a:hover 
 {
     color: #e78b05;
 }
 
-.men2:hover
+.men2:hover 
 {
-    transform: scale(1.20);
+    transform: scale(1.2);
 }
 
-.menu3 a:hover
+.menu3 a:hover 
 {
     color: #945eef;
-    transform: scale(1.20);
+    transform: scale(1.2);
 }
 
-.oriwhite
+.oriwhite 
 {
-    width: 8%;
+    width: 100px;
     color: white;
     text-align: center;
-    padding-top:0.4%;
+    padding-top: 0.4%;
 }
 
-/* Fin Page Index -------------------------------------------------------------------*/ 
+/* Fin Page Index -------------------------------------------------------------------*/
 
-/* Debut Page vcam1 -----------------------------------------------------------------*/ 
+/* Debut Page vcam -----------------------------------------------------------------*/
 
-.l1istecam
+#produit 
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10%;
 }
 
-#d1isplayphoto
+.menuproduit
 {
-    width: 80%;
-    border-left: 0.5px solid black;
-    height: 90%;
-}
-
-.d1es, .d2es, .d3es, .d4es, .d5es
-{
-    margin-left: 5%;
-    font-weight: bold;
-}
-
-#innerNom1, #innerNom11, #innerDes1, #innerPri1, #innerId1, #innerOpt1, #innerNom2, #innerNom21, #innerDes2, #innerPri2, #innerId2, #innerOpt2, #innerNom3, #innerNom31, #innerDes3, #innerPri3, #innerId3, #innerOpt3, #innerNom4, #innerNom41, #innerDes4, #innerPri4, #innerId4, #innerOpt4, #innerNom5, #innerNom51, #innerDes5, #innerPri5, #innerId5, #innerOpt5
-{
-    font-weight: normal;
-}
-
-.gras
-{
-    font-weight: bold;
-}
-
-.titre
-{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 1.2%;
-    height: 10%;
 }
 
-.hh1
+.pos
 {
-    font-size: 30px;
+    margin-top: 2%;
 }
 
-.pan1, .pan2, .pan3, .pan4, .pan5
+.pan1
 {
     border: 2px solid black;
     margin-left: 5%;
@@ -299,7 +306,7 @@ aside
     transition: all 450ms;
 }
 
-.pan1:hover, .pan2:hover, .pan3:hover, .pan4:hover, .pan5:hover 
+.pan1:hover
 {
     transform: scale(1.02);
     color: white;
@@ -307,115 +314,177 @@ aside
     opacity: 0.85;
 }
 
-.buttonori:active 
+#choix
 {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
+    margin-left: 2%;
 }
 
-#p1agemilieu
+/* Fin Page vcam --------------------------------------------------------------------*/
+
+/* Début Page Panier -----------------------------------------------------------------*/
+
+#titlep, #total
 {
-    height: 400px;
+    text-align: center;
 }
 
-/* Fin Page vcam1 --------------------------------------------------------------------*/ 
-
-/* Début Page Panier -----------------------------------------------------------------*/ 
-
-#pagemilieup
+#basket
 {
-    display: flex;
-}
-
-#dpisplayphoto
-{
-    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-.tpitre
-{
-    margin-top: 1%;
     text-align: center;
-    text-decoration: underline 3px #945eef;
 }
 
-.deco
+#articlePanier
 {
-    text-decoration: underline 3px #e78b05;
-    font-size: 30px;
-    margin-top: 1%;
-}
-
-#total
-{
-    text-decoration: underline 3px #e78b05;
-    font-size: 25px;
     margin-top: 2%;
 }
 
-
-.lpistecam
+#produit
 {
-    display: flex;
     margin-top: 3%;
 }
 
-.dpes
+h5
 {
-    width: 200px;
+    margin-left: 2%;
 }
 
-.dpes2
+.paniertxt
 {
-    width: 200px;
-    margin-left: 1%;
+    font-size: 20px;
 }
 
-.cpam 
+#prixTotal
 {
-    padding-right: 40px;
+    margin-top: 2%;
+    text-align: center;
 }
 
-#paniermenu
+#formulaire
+{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-row
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 70%;
-    margin-top: 2%;
-}
-
-#panier1, #panier2, #panier3, #panier4, #panier5
-{
-    display: flex;
-    justify-content: space-around;
-    font-size: 24px;
-    width: 70%;
     text-align: center;
 }
 
-#nomm1, #nomm2, #nomm3, #nomm4, #nomm5 
+#valider
 {
-    margin-left: 0px;
+    border: 2px solid black;
+    line-height: 2.5;
+    padding: 0 10px;
+    font-size: 1rem;
     text-align: center;
-    width: 30%;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 450ms;
 }
 
-#prixx1, #prixx2,#prixx3, #prixx4, #prixx5
+#valider:hover
 {
-    text-align: center;
-    width: 20%;
+    transform: scale(1.02);
+    color: white;
+    background-color: black;
+    opacity: 0.85;
 }
 
-#formulaires
+#supprime
 {
-    width: 30%;
+    border: 2px solid black;
+    margin-left: 5%;
+    line-height: 2.5;
+    padding: 0 10px;
+    font-size: 1rem;
     text-align: center;
-    margin-bottom: 2%;
-
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 450ms;
 }
 
-/* Fin Page Panier -------------------------------------------------------------------*/ 
+#supprime:hover
+{
+    transform: scale(1.02);
+    color: white;
+    background-color: black;
+    opacity: 0.85;
+}
+
+/* Fin Page Panier -------------------------------------------------------------------*/
+
+/* Début Page Confirmation -----------------------------------------------------------*/
+
+.pann
+{
+    border: 2px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2.5;
+    padding: 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 450ms;
+}
+
+.pann:hover
+{
+    transform: scale(1.02);
+    color: white;
+    background-color: black;
+    opacity: 0.85;
+}
+
+.lien
+{
+    text-decoration: none;
+}
+
+a:link 
+{ 
+ text-decoration:none; 
+} 
+
+/* Fin Page Confirmation -----------------------------------------------------------*/
+
+@media all and (max-width: 950px)
+{
+    .menu2CSS
+    {
+        margin-left: 0px;
+    }
+
+    .menu1CSS 
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        padding-top: 5%;
+    }
+
+    .logodef 
+    {
+        width: 200px;
+    }
+}

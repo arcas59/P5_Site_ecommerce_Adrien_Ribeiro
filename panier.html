@@ -1,100 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Orinoco</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="robots" content="all">
-        <link rel="stylesheet" href="design.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div id="pageentiere">
-            <header>
-                <div class="logo">
-                    <a href="index.html"><img class="logodef" src="images/logo.png" alt="logo orinoco"></a>
-                    <a href="index.html"><img class="logodef2" src="images/caddie.png" alt="logo caddie"></a>
-                </div>
-                <div class="Menu">
-                    <div class="menu1">
-                        <a href="index.html"><img class="logodef3" src="images/logo.png" alt="logo orinoco"></a>
-                    </div>
-                    <div class="menu2">
-                        <a class="men2" href="index.html">Produits</a>
-                    </div>
-                    <div class="menu3">
-                        <a class="men3" href="panier.html">Mon Panier<img class="logodef4" src="images/caddie.png" alt="logo caddie"></a>
-                    </div>
-                </div>
-            </header>
-            <hr>
-            <main id="pagemilieup">
-                <section id="dpisplayphoto">
-                    <div class="tpitre">
-                        <h1 class="hh1">Votre Panier</h1>
-                    </div>
-                    <div id=paniermenu>
-                        <div id="panier1">
-                            <div class="nomm1"></div>
-                            <div class="prixx1"></div>
-                        </div>
-                        <div id="panier2">
-                            <div id="nomm2"></div>
-                            <div id="prixx2"></div>
-                        </div>
-                        <div id="panier3">
-                            <div id="nomm3"></div>
-                            <div id="prixx3"></div>
-                        </div>
-                        <div id="panier4">
-                            <div id="nomm4"></div>
-                            <div id="prixx4"></div>
-                        </div>
-                        <div id="panier5">
-                            <div id="nomm5"></div>
-                            <div id="prixx5"></div>
-                        </div>
-                    </div>
-                    <div id="total">
-                        Total du panier :
-                    </div>
-                </section>
-                <section id="formulaires">
-                    <form method="post" action="traitement.php">
-                        <fieldset>
-                            <legend class="deco">Vos coordonnées</legend>
-                            <p>
-                                <label for="nom">Indiquez votre Nom :</label>
-                                <input type="text" name="nom" id="nom" maxlength="20" autofocus required>
-                            </p>
-                            <p>
-                                <label for="prenom">Indiquez votre Prénom :</label>
-                                <input type="text" name="prneom" id="prenom" maxlength="20" required>
-                            </p>
-                            <p>
-                                <label for="nom">Indiquez votre adresse :</label>
-                                <input type="text" name="ville" id="ville" minlength="5" required>
-                            </p>
-                            <p>
-                                <label for="nom">Indiquez votre ville :</label>
-                                <input type="text" name="ville" id="ville" minlength="1" required>
-                            </p>
-                            <p>
-                                <label for="nom">Indiquez votre Email :</label>
-                                <input type="mail" name="email" id="email" minlength="3" required>
-                            </p>
-                                <input type="submit" value="Passer la commande" />
-                        </fieldset>
-                    </form>
-                </section>
-            </main>
-            <footer>
-                <img class="oriwhite" src="images/logowhite.png" alt="logo blanc orinoco">
-                <img class="logodef5" src="images/caddie.png" alt="logo caddie">
-            </footer>
+  <head>
+    <meta charset="utf-8" />
+    <title>Orinoco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="all" />
+    <link rel="stylesheet" href="design.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <script
+      src="https://kit.fontawesome.com/cb2cd7d905.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="pageentiere">
+      <header>
+        <div class="logo">
+          <a href="index.html"
+            ><img class="logodef" src="images/logo.png" alt="logo orinoco"
+          /></a>
+          <a href="index.html"
+            ><img class="logodef2" src="images/caddie.png" alt="logo caddie"
+          /></a>
         </div>
-        <script src="js/requete.js" async></script>
-        <script src="js/post.js" async></script>
-    </body>
+        <div class="Menu">
+          <div class="menu1">
+            <a href="index.html"
+              ><img class="logodef3" src="images/logo.png" alt="logo orinoco"
+            /></a>
+          </div>
+          <div class="menu2">
+            <a class="men2" href="index.html">Produits</a>
+          </div>
+          <div class="menu3">
+            <a class="men3" href="panier.html" data-target="panier">Mon Panier<img
+                class="logodef4"
+                src="images/caddie.png"
+                alt="logo caddie"
+            /><span class="totalQté"></span></a>
+          </div>
+        </div>
+      </header>
+      <hr />
+      <main>
+        <h3 id="titlep">Vos articles du panier :</h3>
+        <div id="basket"></div>
+        <div id="total"></div>
+  
+  
+    <form id="formulaire" >
+      <div class="form-row">
+        <div class="form-group">
+            <label for="firstname">Prénom :</label>
+            <input type="text" name="firstName" class="form-control" id="firstname" placeholder="Votre prénom..." required><span id='oublisPrenom'></span><br>
+        </div>
+        <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" name="lastName" class="form-control" id="name" placeholder="Votre nom..." required><span id='oublisNom'></span><br>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Votre email@email.fr" required><span id='oublisEmail'></span><br>
+        </div>
+        <div class="form-group">
+            <label for="address">Adresse :</label>
+            <input type="text" name="address" class="form-control" id="address" placeholder="22 rue Jean Jaures" required><span id='oublisAdress'></span><br>
+        </div>
+    </div>
+        <div class="form-group">
+            <label for="city">Ville :</label>
+            <input type="text" name="city" class="form-control" id="city" placeholder="Votre ville..." required><span id='oublisVille'></span><br>
+        </div>
+  
+      <button type="button" onclick="achat()" id="valider">Valider mon panier</button>
+     
+    </form>
+  
+    </main> 
+      <footer>
+        <img
+          class="oriwhite"
+          src="images/logowhite.png"
+          alt="logo blanc orinoco"
+        />
+        <img class="logodef5" src="images/caddie.png" alt="logo caddie" />
+      </footer>
+    </div>
+    <script src="js/panier.js" async></script>
+  </body>
 </html>
