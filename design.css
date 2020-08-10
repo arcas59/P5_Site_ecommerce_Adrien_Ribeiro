@@ -403,10 +403,16 @@ h5
     opacity: 0.85;
 }
 
+#price
+{
+    width: 100px;
+}
+
 #supprime
 {
     border: 2px solid black;
-    margin-left: 5%;
+    width: 200px;
+    margin-left: 2%;
     line-height: 2.5;
     padding: 0 10px;
     font-size: 1rem;

@@ -34,9 +34,10 @@ let article = () => {
       request.send();
   };
 
-  // Chargement dynamique de l'article demandé
+  // Chargement dynamique du Reflex dans la page produit
 window.addEventListener('load', article);
 
+// Création de la variable panier qui prendra les informations de la catégorie "panier" du localstorage
 let panier = localStorage.getItem('panier');
 panier = JSON.parse(panier);
 localStorage.setItem('panier', JSON.stringify(panier));
@@ -126,6 +127,8 @@ function ajoutLocalStorage(){
     }
     localStorage.setItem("panier", JSON.stringify(panier));
 }
+
+// Fonction pour calculer la somme des prix dans la division "prixTotal" du localstorage
 function prixTotal(){
     let price = parseInt(reflex.price);
     let prixDuPanier = JSON.parse(localStorage.getItem('prixTotal'));
@@ -150,4 +153,6 @@ function prixTotal(){
     div.appendChild(label);
     div.appendChild(lenses);
     div.appendChild(ajoutPanier)
+    div.appendChild(liste);
+    div.appendChild(voirPanier);
 };

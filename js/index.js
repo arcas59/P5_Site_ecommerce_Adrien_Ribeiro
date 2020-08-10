@@ -7,7 +7,7 @@ function chargementPanier(){
     }else{
         document.querySelector ('.totalQté').textContent = "" ;
     }
-  }
+}
   chargementPanier(); 
 
 const list = document.getElementById("listecam");
@@ -23,7 +23,7 @@ const createElement = function (data) {
   el.className = "menu2CSS";
 
   const link = document.createElement("A");
-  link.href = "vcam.html?id=" + data._id;
+  link.href = "produit.html?id=" + data._id;
 
   el.appendChild(link);
 
@@ -54,35 +54,22 @@ const createElement = function (data) {
 };
 
 /*
-Test avec demande Fetch
-var Reflex = function (url) {
-    return new Promise(function (resolve, reject) {
-      var xhr = new XMLHttpRequest();
-  
-      xhr.onreadystatechange = function () {
-        if (this.readyState == XMLHttpRequest.DONE &&
-        this.status >= 200 &&
-        this.status < 300)}
-        {
-        const data = getParsedData(this.responseText);
-        data.forEach(function (d) {
-        const element = createElement(d);
-        list.appendChild(element);
-        });};
-          } else {
-            reject(xhr);
-            // alerte si le serveur ne répond pas
-            alert("Nous sommes désolé, le serveur ne répond pas ! ")
-          };
-        };
-      };
-      xhr.open('GET','http://localhost:3000/api/cameras/', true);
-      xhr.send();
-    });
-  };
+//Test avec demande Fetch
+fetch("http://localhost:3000/api/cameras/")
+.then(function(response) { //promesse de réponse serveur
+    if (response.ok) {
+        response.json()
+        .then(function(data) { //promesse de conversion;
+        });
+    }
+})
+.catch(function() {
+    alert("Nous avons un problème avec le serveur... Désolé")
+});
 */
 
 //Requete au serveur
+
 const xhr = new XMLHttpRequest();
 
 xhr.onreadystatechange = function () {

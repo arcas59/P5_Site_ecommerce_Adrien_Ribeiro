@@ -69,12 +69,12 @@ function chargementPanier(){
         basket.appendChild(article);  
         article.appendChild(nom);                   
         article.appendChild(image);
-        article.appendChild(div);  
-        article.appendChild(supprime);       
+        article.appendChild(div);       
         div.appendChild(quantite);
         div.appendChild(qté);
         div.appendChild(prix);
         div.appendChild(price);
+        div.appendChild(supprime);  
         
       }); 
     }; 
@@ -100,7 +100,7 @@ function chargementPanier(){
       deleteButtons[i].addEventListener('click', () => {
         // Récupération du nom de la caméra pour plus tard
         nomProduit = deleteButtons[i].parentElement.parentElement.firstChild.innerText.trim();
-        console.log(nomProduit);
+      console.log(nomProduit);
         // Récupération du qté de caméras pour calculs de la suppression
         qté = deleteButtons[i].parentElement.children[1].textContent;
         // Conversion du string en number
@@ -225,7 +225,7 @@ function chargementPanier(){
       return event.preventDefault();
   
     } else if (mailValid.test(mail.value) == false){
-      oublisEmail.textContent = "Votre d'e-mail est invalide";
+      oublisEmail.textContent = "Votre e-mail est invalide";
       oublisEmail.style.color = 'red';
       return event.preventDefault();
   
@@ -253,7 +253,7 @@ function chargementPanier(){
              sessionStorage.setItem('prix', JSON.stringify(prix));
             console.log(typeof prix);
             console.log( prix);
-             // Des que la requete est envoyé, on bascule sur la page de confirmation de commande avec toutes les infos du client
+             // Des que la requete est envoyé, on bascule sur la page de confirmation de commande avec toutes les infos demandé : Id de commande, prix du panier
              window.location.href = "commande.html";
            }
          };
