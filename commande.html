@@ -11,42 +11,40 @@
         <script src="https://kit.fontawesome.com/cb2cd7d905.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="pageentiere">
-            <header>
-                <div class="logo">
-                    <a href="index.html"><img class="logodef" src="images/logo.png" alt="logo orinoco"></a>
-                    <a href="index.html"><img class="logodef2" src="images/caddie.png" alt="logo caddie"></a>
+        <header>
+            <div class="logo">
+                <a href="index.html"><img class="logodef" src="images/logo.png" alt="logo orinoco"></a>
+                <a href="index.html"><img class="logodef2" src="images/caddie.png" alt="logo caddie"></a>
+            </div>
+            <div class="Menu">
+                <div class="menu1">
+                    <a href="index.html"><img class="logodef3" src="images/logo.png" alt="logo orinoco"></a>
                 </div>
-                <div class="Menu">
-                    <div class="menu1">
-                        <a href="index.html"><img class="logodef3" src="images/logo.png" alt="logo orinoco"></a>
-                    </div>
-                    <div class="menu2">
-                        <a class="men2" href="index.html">Produits</a>
-                    </div>
-                    <div class="menu3">
-                        <a class="men3" href="panier.html" data-target="panier">Mon Panier<img class="logodef4" src="images/caddie.png" alt="logo caddie"/><span class="totalQté"></span></a>
-                    </div>
+                <div class="menu2">
+                    <a class="men2" href="index.html">Produits</a>
                 </div>
-            </header>
-            <hr>
-            <main id="pagemilieu">
-                <section>
-                    <div class="jumbotron ConfirmationDeCommande">
-                        <h1 class="display-4">Commande confirmée ! <i class="fas fa-check"></i></h1>
-                        <div id="recap">
-                        </div>
-                        <a href="index.html">
-                            <button class ="pann" onclick="retour()">Retourner à l'accueil du site</button>
-                        </a>
+                <div class="menu3">
+                    <a class="men3" href="panier.html" data-target="panier">Mon Panier<img class="logodef4" src="images/caddie.png" alt="logo caddie"/><span class="totalQté"></span></a>
+                </div>
+            </div>
+            <hr class="ligne">
+        </header>
+        <main id="pagepanier">
+            <section>
+                <div class="jumbotron ConfirmationDeCommande">
+                    <h1 class="display-4">Commande confirmée ! <i class="fas fa-check"></i></h1>
+                    <div id="recap">
                     </div>
-                </section>
-            </main>
-            <footer>
-                <img class="oriwhite" src="images/logowhite.png" alt="logo blanc orinoco">
-                <img class="logodef5" src="images/caddie.png" alt="logo caddie">
-            </footer>
-        </div>
+                    <a href="index.html">
+                        <button class ="pann" onclick="retour()">Retourner à l'accueil du site</button>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <img class="oriwhite" src="images/logowhite.png" alt="logo blanc orinoco">
+            <img class="logodef5" src="images/caddie.png" alt="logo caddie">
+        </footer>
         <script src="js/order.js" async></script>
     </body>
 </html>
