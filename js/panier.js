@@ -1,68 +1,60 @@
-// Chargement des articles sur le panier dynamiquement
-function chargementPanier(){
-    let nombreProduit = localStorage.getItem('qté'); 
-    
-    if(nombreProduit){
-    document.querySelector ('.totalQté').textContent = nombreProduit;
-    }else{
-        document.querySelector ('.totalQté').textContent = "" ;
-    }
-  }
-  chargementPanier(); 
-  
-  // Affichage des articles qui se trouve dans le panier dans la page panier
+// Affichage des articles qui se trouve dans le panier dans la page panier
   function affichagePanier(){
   
     let data = JSON.parse(localStorage.getItem('panier'));
   
   
   // On enregistre les valeurs du prix total dans une variable à partir du localstorage
-    var total = localStorage.getItem('prixTotal');
-    var prixPanier = document.getElementById('total');
+    let total = localStorage.getItem('prixTotal');
+    console.log("Montant du panier en: ", numStr(total), "€");
+    let prixPanier = document.getElementById('total');
   
   // Affichage du prix total du panier si le panier possède un article...Sinon on affiche "votre panier est vide"
     if (total != null) {
-      prixPanier.textContent = 'Le montant de votre commande est de : ' + total +  ' €';
+      prixPanier.textContent = 'Le montant de votre commande est de : ' + numStr(total) +  ' €';
       prixPanier.id = 'prixTotal'; 
     } else  {
       prixPanier.textContent = 'Le montant de votre commande est de : 0 €';
     }
   
-  //Affichage des produits au panier de façon dynamique
+  // Affichage des produits au panier de façon dynamique
     let productContainer = document.getElementById("basket");
   
     if( data == null || total == 0 ) {
-      var div = document.createElement('div');
+      let div = document.createElement('div');
       div.textContent = " Votre panier est vide ";
+      console.log(div.textContent);
       basket.appendChild(div);
     } else {
       productContainer.innerHTML = '';
-      // On récupere les valeurs dans le localStorage
+      // On récupere les valeurs dans le localStorage et on les affichent dynamiquement sur la page panier.html
       Object.values(data).map( (reflex) => {
       
-        var article = document.createElement('article');
+        let article = document.createElement('article');
         article.id = "articlePanier";
-        var nom = document.createElement('h2');
+        let nom = document.createElement('h2');
         nom.textContent = reflex.name;
-        var image = document.createElement('img');
+        let image = document.createElement('img');
         image.src =  reflex.imageUrl;
         image.className = "menu4CSS";
-        var div = document.createElement('div');
+        let div = document.createElement('div');
         div.id = "produit";
         div.className = "paniertxt";
-        var quantite = document.createElement('h5');
+        let quantite = document.createElement('h5');
         div.className = "paniertxt";
         quantite.textContent = 'Quantité: ';
-        var qté = document.createElement('h5');
+        let qté = document.createElement('h5');
         qté.textContent = reflex.qté;
-        var prix = document.createElement('h5');
+        let prix = document.createElement('h5');
         prix.textContent = 'Prix: '; 
-        var price = document.createElement('h5');
+        let price = document.createElement('h5');
         price.textContent = reflex.price + " €";
-        price.id = "price";  
-        var supprime = document.createElement('button');
+        price.id = "price";
+        let supprime = document.createElement('button');
         supprime.textContent = "supprimer l'article";
         supprime.id = "supprime";
+
+        console.log("Article dans la Panier actuellement: ", nom.textContent);
                  
         // Mise en place des éléments dans le DOM
       
@@ -100,7 +92,7 @@ function chargementPanier(){
       deleteButtons[i].addEventListener('click', () => {
         // Récupération du nom de la caméra pour plus tard
         nomProduit = deleteButtons[i].parentElement.parentElement.firstChild.innerText.trim();
-      console.log(nomProduit);
+        console.log(nomProduit);
         // Récupération du qté de caméras pour calculs de la suppression
         qté = deleteButtons[i].parentElement.children[1].textContent;
         // Conversion du string en number
@@ -109,6 +101,7 @@ function chargementPanier(){
         let price = deleteButtons[i].parentElement.children[3].textContent;
          // Conversion du string en number
         price = parseInt(price);
+        console.log("envoi du prix: ", price);
         // Calcul de la qté dans le panier après suppression de l'article
         calculQte = nombreTotalDeProduit - qté;
         localStorage.setItem('qté', calculQte);
@@ -131,7 +124,7 @@ function chargementPanier(){
   };
   
   // Requete finale de commande contenant les informations de contact et les Id produit
-  var formValid = document.getElementById('valider');
+  let formValid = document.getElementById('valider');
   formValid.addEventListener ('click', achat);
   
   function achat() {
@@ -139,10 +132,11 @@ function chargementPanier(){
   // Integration d'une alerte si le panier est vide, on ne peut pas passer commande  
     let panier = localStorage.getItem('panier');
     panier = JSON.parse(panier);
-    var total = localStorage.getItem('prixTotal');
+    let total = localStorage.getItem('prixTotal');
   if (panier == null || total == 0){
     alert("Votre panier est vide, vous ne pouvez pas passer une commande ! ")
-   }  
+   };
+
   // On déclare un tableau de produits pour la requete POST plus tard
    let products = [];
   
@@ -194,25 +188,25 @@ function chargementPanier(){
    // Console.log(products);
     
     // Afficher une alerte si il manque un renseignement et enregistrer les données dans le localStorage
-    var prenom = document.getElementById('firstname');
-    var oublisPrenom = document.getElementById('oublisPrenom');
-    var prenomValid = /^[a-zA-Z ,.'-]+$/;
+    let prenom = document.getElementById('firstname');
+    let oublisPrenom = document.getElementById('oublisPrenom');
+    let prenomValid = /^[a-zA-Z ,.'-]+$/;
   
-    var nom = document.getElementById('name');
-    var oublisNom = document.getElementById('oublisNom');
-    var nomValid = /^[a-zA-Z ,.'-]+$/;
+    let nom = document.getElementById('name');
+    let oublisNom = document.getElementById('oublisNom');
+    let nomValid = /^[a-zA-Z ,.'-]+$/;
   
-    var mail = document.getElementById('email');
-    var oublisEmail = document.getElementById('oublisEmail');
-    var mailValid = /^[a-z0-9._-]+@[a-z0-9.-]{2,}[.][a-z]{2,3}$/;
+    let mail = document.getElementById('email');
+    let oublisEmail = document.getElementById('oublisEmail');
+    let mailValid = /^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$/;
   
-    var adresse = document.getElementById('address');
-    var oublisAdress = document.getElementById('oublisAdress');
-    var adresseValid = /[0-9a-zA-Z]{1,3}[a-z ,.'-]+$/;
+    let adresse = document.getElementById('address');
+    let oublisAdress = document.getElementById('oublisAdress');
+    let adresseValid = /[0-9a-zA-Z]{1,3}[a-z ,.'-]+$/;
   
-    var ville = document.getElementById('city');
-    var oublisVille = document.getElementById('oublisVille');
-    var villeValid = /^^[a-zA-Z ,.'-]+$/;
+    let ville = document.getElementById('city');
+    let oublisVille = document.getElementById('oublisVille');
+    let villeValid = /^^[a-zA-Z ,.'-]+$/;
   
     if (prenomValid.test(prenom.value) == false){
       oublisPrenom.textContent = "Merci d'indiquer votre prénom correctement";
@@ -248,11 +242,11 @@ function chargementPanier(){
          request.onreadystatechange = function () {
            if (this.readyState == XMLHttpRequest.DONE) {
              let confirmation = JSON.parse(this.responseText);
-             sessionStorage.setItem('order', JSON.stringify(confirmation));
+             localStorage.setItem('order', JSON.stringify(confirmation));
              let prix = JSON.parse(localStorage.getItem('prixTotal'));
-             sessionStorage.setItem('prix', JSON.stringify(prix));
-            console.log(typeof prix);
-            console.log( prix);
+             localStorage.setItem('prix', JSON.stringify(prix));
+             console.log(typeof prix);
+             console.log( prix);
              // Des que la requete est envoyé, on bascule sur la page de confirmation de commande avec toutes les infos demandé : Id de commande, prix du panier
              window.location.href = "commande.html";
            }
@@ -260,6 +254,6 @@ function chargementPanier(){
     request.open("post", "http://localhost:3000/api/cameras/order");
     request.setRequestHeader("Content-Type", "application/json");
     request.send(achat);
-  } 
-  
   }
+  
+  };

@@ -1,32 +1,21 @@
-//Chargement des articles sur le panier dynamiquement
-function chargementPanier(){
-    let nombreProduit = localStorage.getItem('qté'); 
-    
-    if(nombreProduit){
-    document.querySelector ('.totalQté').textContent = nombreProduit;
-    }else{
-        document.querySelector ('.totalQté').textContent = "" ;
-    }
-  }
-  chargementPanier(); 
-
-//  récupération de l'id produit dans le query 
+// Récupération de l'id produit dans l'URL dynamique ou query
 
 let params = new URLSearchParams(document.location.search);
 let id = params.get("id");
-console.log(id);
+console.log("Id de l'URL dynamique: ", id);
 
 let _id = id;
 let reflex;
 
 
-//Requete pour obtenir les informations du serveur
+// Requete pour obtenir les informations du serveur
 
 let article = () => {
     let request = new XMLHttpRequest();
       request.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
               reflex = JSON.parse(this.responseText);
+              console.log("Retour serveur pour un produit: ", reflex);
               affichageProduit();
           }
       };
@@ -34,13 +23,14 @@ let article = () => {
       request.send();
   };
 
-  // Chargement dynamique du Reflex dans la page produit
+// Chargement dynamique du Reflex dans la page produit
 window.addEventListener('load', article);
 
 // Création de la variable panier qui prendra les informations de la catégorie "panier" du localstorage
 let panier = localStorage.getItem('panier');
 panier = JSON.parse(panier);
 localStorage.setItem('panier', JSON.stringify(panier));
+console.log("Ajout au Panier de l'article: ", panier);
 
  // Affichage du produit sur la page
 function affichageProduit() {
@@ -61,14 +51,14 @@ function affichageProduit() {
         var prix = document.createElement('h4');
         prix.textContent = 'Prix :';
         var price = document.createElement('p');
-        price.textContent = reflex.price + ' €';
+        price.textContent = numStr(reflex.price) + ' €';
     
         var desc = document.createElement('h4');
         desc.textContent = 'Description :';
         var description = document.createElement('p');
         description.textContent = reflex.description;
 
-    //  choix de la lentille
+    // Choix de la lentille
     var label = document.createElement('label');
     label.textContent = "Lentilles : ";
     var lenses = document.createElement('select');
@@ -76,7 +66,7 @@ function affichageProduit() {
     var choix = reflex.lenses;
     choix.id = "lentilles";
 
-    // création d'une boucle For pour afficher la liste déroulante des lentilles en options sur les cameras
+    // Création d'une boucle For pour afficher la liste déroulante des lentilles en options sur les cameras
     for (var i = 0; i < choix.length; i++) {
     var option = document.createElement('option');
     option.textContent = choix[i];
@@ -84,19 +74,20 @@ function affichageProduit() {
     lenses.appendChild(option);
     };
 
-    // bouton "Ajouter au panier"
+    // Création du bouton "Ajouter au panier"
     ajoutPanier = document.createElement ('button');
     ajoutPanier.id = "stockage";
     ajoutPanier.textContent = "Ajouter au panier";
     ajoutPanier.className = "pan1";
 
     ajoutPanier.addEventListener('click', function() {
-        alert('Vous avez ajouté ' + reflex.name + ' à votre panier')
-        ajoutLocalStorage()
-        nombreProduit()
-        prixTotal()
+        alert('Vous avez ajouté ' + reflex.name + ' à votre panier');
+        console.log("L'article "+ reflex.name + "a été ajouté au panier");
+        ajoutLocalStorage();
+        nombreProduit();
+        prixTotal();
 
-    //Mise a jour du nombre de produit
+    // Mise a jour du nombre de produit 
 function nombreProduit(){  
     let nombreProduit = localStorage.getItem('qté');  
     nombreProduit = parseInt(nombreProduit);
@@ -109,7 +100,7 @@ function nombreProduit(){
        document.querySelector ('.totalQté').textContent = 1;
     }
 } 
-//Mise a jour du nombre de produit dans l'objet "qté:" dans le localstorage 
+// Mise a jour du nombre de produit dans l'objet "qté:" dans le localstorage 
 function ajoutLocalStorage(){
     let panier = localStorage.getItem('panier');
     panier = JSON.parse(panier);
@@ -153,6 +144,4 @@ function prixTotal(){
     div.appendChild(label);
     div.appendChild(lenses);
     div.appendChild(ajoutPanier)
-    div.appendChild(liste);
-    div.appendChild(voirPanier);
 };
