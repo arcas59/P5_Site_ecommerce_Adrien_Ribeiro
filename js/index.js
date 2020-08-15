@@ -43,67 +43,36 @@ nomReflex.appendChild(prixReflex);
 return el;
 };
 
-// Requete au serveur XMLHttpRequest
+// Requete au serveur XMLHttpRequest grâce aux promesses Resolve et Reject
 
-const xhr = new XMLHttpRequest();
-
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4) {
-      if (xhr.status === 200)
-    {
-      const data = getParsedData(this.responseText);
-      console.log("reponse:", data);
-      data.forEach(function (d) {
-      console.log("Retour serveur: ", d);
-      const element = createElement(d);
-      list.appendChild(element);
-      });
-    } else {
-      alert("Désolé, nous avons un problème avec le serveur...");
-    }
-  }
-};
-
-xhr.open("GET", "http://localhost:3000/api/cameras", true);
-
-xhr.send();
-
-
-/* Méthode Fetch + GET pour aller chercher les données sur le serveur
 let reflexRequest = function (url) {
-return new Promise(function (resolve, reject) {
-  let xhr = new XMLHttpRequest();
+  return new Promise(function (resolve, reject) {
+    let xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        resolve(
-          const data = getParsedData(this.responseText);
-          data.forEach(function (d) {
-          const element = createElement(d);
-          list.appendChild(element);
-        ));
-      } else {
-        reject(xhr);
-        // alerte si le serveur ne répond pas
-        alert("Désolé, nous avons un problème avec le serveur...")
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          resolve(xhr.responseText);
+        } else {
+          reject(xhr);
+        };
       };
     };
-  };
-  xhr.open('GET','http://localhost:3000/api/cameras/', true);
-  xhr.send();
-});
+    xhr.open('GET',url, true);
+    xhr.send();
+  })
 };
-*/
-/*
-fetch('http://localhost:3000/api/cameras')
-  .then(function (response) {
-    return response.json()
-  }).then(function (data) {
-    console.log(data);
-  }).then(
-      data.forEach(function (d) {
-      const element = createElement(d);
-      list.appendChild(element);
-  );
-*/
+
+reflexRequest("http://localhost:3000/api/cameras/").then(function (response) {
+  const data = getParsedData(response);
+            data.forEach(function (d) {
+            const element = createElement(d);
+            list.appendChild(element);
+            console.log("Retour serveur: ", d);
+            });
+            
+            
+}).catch(function (error) {
+    alert("Désolé, nous avons un problème avec le serveur...")
+    console.log("Problème sevreur détecté !")
+});

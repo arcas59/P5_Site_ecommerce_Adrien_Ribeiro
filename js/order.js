@@ -29,8 +29,6 @@ function commande(){
 }
 // Remise à zero du localStorage grace au bouton "retour a l'accueil du site" et retour a index.html
 function retour(){
-
-  localStorage.clear();
   localStorage.clear();
 }
 commande();
