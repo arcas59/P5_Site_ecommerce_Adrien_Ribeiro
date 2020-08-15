@@ -63,6 +63,8 @@ let reflexRequest = function (url) {
   })
 };
 
+// Si la promesse Resolve s'effectue correctement alors elle renvoie une response :
+
 reflexRequest("http://localhost:3000/api/cameras/").then(function (response) {
   const data = getParsedData(response);
             data.forEach(function (d) {
@@ -70,8 +72,8 @@ reflexRequest("http://localhost:3000/api/cameras/").then(function (response) {
             list.appendChild(element);
             console.log("Retour serveur: ", d);
             });
-            
-            
+
+// Sinon la promesse Reject renvoi une error :             
 }).catch(function (error) {
     alert("Désolé, nous avons un problème avec le serveur...")
     console.log("Problème sevreur détecté !")
