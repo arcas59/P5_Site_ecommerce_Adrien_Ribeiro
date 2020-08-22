@@ -35,40 +35,40 @@ console.log("Ajout au Panier de l'article: ", panier);
  // Affichage du produit sur la page
 function affichageProduit() {
     
-    var article = document.createElement('article');
+    let article = document.createElement('article');
     article.className = "menuproduit";
-        var image = document.createElement('img');
+        let image = document.createElement('img');
         image.src =  reflex.imageUrl;
         image.className = "menu3CSS";
         id =  reflex._id;
 
-    var div = document.createElement('div');
+    let div = document.createElement('div');
         div.className = "pos";
-        var nom = document.createElement('h3');
+        let nom = document.createElement('h3');
         nom.textContent = reflex.name;
         nom.id = "Camera";
     
-        var prix = document.createElement('h4');
+        let prix = document.createElement('h4');
         prix.textContent = 'Prix :';
-        var price = document.createElement('p');
+        let price = document.createElement('p');
         price.textContent = numStr(reflex.price) + ' €';
     
-        var desc = document.createElement('h4');
+        let desc = document.createElement('h4');
         desc.textContent = 'Description :';
-        var description = document.createElement('p');
+        let description = document.createElement('p');
         description.textContent = reflex.description;
 
     // Choix de la lentille
-    var label = document.createElement('label');
+    let label = document.createElement('label');
     label.textContent = "Lentilles : ";
-    var lenses = document.createElement('select');
+    let lenses = document.createElement('select');
     lenses.id = 'choix';
-    var choix = reflex.lenses;
+    let choix = reflex.lenses;
     choix.id = "lentilles";
 
     // Création d'une boucle For pour afficher la liste déroulante des lentilles en options sur les cameras
-    for (var i = 0; i < choix.length; i++) {
-    var option = document.createElement('option');
+    for (let i = 0; i < choix.length; i++) {
+    let option = document.createElement('option');
     option.textContent = choix[i];
     option.id = "lentilles";
     lenses.appendChild(option);

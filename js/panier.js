@@ -6,7 +6,7 @@
   
   // On enregistre les valeurs du prix total dans une variable à partir du localstorage
     let total = localStorage.getItem('prixTotal');
-    console.log("Montant du panier en: ", numStr(total), "€");
+    console.log("Montant du panier actuellement: ", numStr(total), "€");
     let prixPanier = document.getElementById('total');
   
   // Affichage du prix total du panier si le panier possède un article...Sinon on affiche "votre panier est vide"
@@ -48,7 +48,7 @@
         let prix = document.createElement('h5');
         prix.textContent = 'Prix: '; 
         let price = document.createElement('h5');
-        price.textContent = reflex.price + " €";
+        price.textContent = numStr(reflex.price) + " €";
         price.id = "price";
         let supprime = document.createElement('button');
         supprime.textContent = "supprimer l'article";
@@ -79,7 +79,7 @@
   // Suppression d'un article du panier
   function deleteButtons() {  
     let deleteButtons = document.querySelectorAll('#supprime');
-    let nomProduit ;
+    let nomProduit;
     let nombreTotalDeProduit = localStorage.getItem('qté');
     nombreTotalDeProduit = parseInt(nombreTotalDeProduit);
     let coutDuPanier = localStorage.getItem("prixTotal");
@@ -100,7 +100,7 @@
         // récupération du prix de la caméra pour calculs de la suppression
         let price = deleteButtons[i].parentElement.children[3].textContent;
          // Conversion du string en number
-        price = parseInt(price);
+        price = parseInt(price.split(" ").join(""));
         console.log("envoi du prix: ", price);
         // Calcul de la qté dans le panier après suppression de l'article
         calculQte = nombreTotalDeProduit - qté;
