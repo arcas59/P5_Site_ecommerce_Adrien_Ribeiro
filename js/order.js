@@ -2,15 +2,15 @@
 
 function commande(){
 
-  let data = JSON.parse(localStorage.getItem('order'));
-  let prix = JSON.parse(localStorage.getItem('prix'));
+  let data = JSON.parse(localStorage.getItem("order"));
+  let prix = JSON.parse(localStorage.getItem("prix"));
 
   let productContainer = document.getElementById("recap");
 
   // Création du message de confirmation de commande
 
   if( data != null ) {
-      productContainer.innerHTML = '';
+      productContainer.innerHTML = "";
       // On récupere les données dans l'objet order de la commande dans le LocalStorage
       Object.values(data).map( () => {
 

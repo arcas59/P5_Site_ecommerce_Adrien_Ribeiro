@@ -3,44 +3,40 @@
 const list = document.getElementById("listecam");
 list.className = "menu1CSS";
 
-const getParsedData = function (data) {
-return JSON.parse(data);
-};
-
 const createElement = function (data) {
-const el = document.createElement("DIV");
-el.classList.add("cam");
-el.className = "menu2CSS";
+  const el = document.createElement("DIV");
+  el.classList.add("cam");
+  el.className = "menu2CSS";
 
-const link = document.createElement("A");
-link.href = "produit.html?id=" + data._id;
+  const link = document.createElement("A");
+  link.href = "produit.html?id=" + data._id;
 
-el.appendChild(link);
+  el.appendChild(link);
 
-const elChild = document.createElement("DIV");
-elChild.classList.add("imgContainer");
+  const elChild = document.createElement("DIV");
+  elChild.classList.add("imgContainer");
 
-link.appendChild(elChild);
+  link.appendChild(elChild);
 
-const imgReflex = document.createElement("IMG");
-imgReflex.className = "menu3CSS";
-imgReflex.alt = data.name;
-imgReflex.src = data.imageUrl;
+  const imgReflex = document.createElement("IMG");
+  imgReflex.className = "menu3CSS";
+  imgReflex.alt = data.name;
+  imgReflex.src = data.imageUrl;
 
-elChild.appendChild(imgReflex);
+  elChild.appendChild(imgReflex);
 
-const nomReflex = document.createElement("p");
-nomReflex.innerText = data.name;
-nomReflex.className = "menu5CSS";
+  const nomReflex = document.createElement("p");
+  nomReflex.innerText = data.name;
+  nomReflex.className = "menu5CSS";
 
-link.appendChild(nomReflex);
+  link.appendChild(nomReflex);
 
-const prixReflex = document.createElement("p");
-prixReflex.innerText = numStr(data.price) + " €";
+  const prixReflex = document.createElement("p");
+  prixReflex.innerText = numStr(data.price) + " €";
 
-nomReflex.appendChild(prixReflex);
+  nomReflex.appendChild(prixReflex);
 
-return el;
+  return el;
 };
 
 // Requete au serveur XMLHttpRequest grâce aux promesses Resolve et Reject
@@ -58,15 +54,15 @@ let reflexRequest = function (url) {
         };
       };
     };
-    xhr.open('GET',url, true);
+    xhr.open("GET",url, true);
     xhr.send();
-  })
+  });
 };
 
 // Si la promesse Resolve s'effectue correctement alors elle renvoie une response :
 
 reflexRequest("http://localhost:3000/api/cameras/").then(function (response) {
-  const data = getParsedData(response);
+  const data = JSON.parse(response);
             data.forEach(function (d) {
             const element = createElement(d);
             list.appendChild(element);
